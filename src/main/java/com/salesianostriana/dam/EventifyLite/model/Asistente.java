@@ -22,8 +22,7 @@ public class Asistente {
     private String nombre;
     private String email;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @Builder.Default
+    @OneToMany(mappedBy = "asistente", fetch = FetchType.LAZY)
     List<Entrada> entradas = new ArrayList<>();
 
 

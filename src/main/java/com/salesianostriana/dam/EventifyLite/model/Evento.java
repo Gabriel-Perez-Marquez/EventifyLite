@@ -22,7 +22,7 @@ public class Evento {
     private int aforoMax;
     private int entradasVendidas;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "evento", fetch = FetchType.LAZY)
     @Builder.Default
     List<Entrada> entradas = new ArrayList<>();
 
